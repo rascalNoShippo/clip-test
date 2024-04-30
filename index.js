@@ -7,12 +7,15 @@
 
   if (!textarea || !button || !pre) return;
 
+  const { clipboard } = navigator;
+
   button.addEventListener("click", () => {
     const text = textarea.value;
-    navigator.clipboard.writeText(text).then(
+
+    clipboard.writeText(text).then(
       async () => {
         console.log("Copied to clipboard");
-        const readText = await navigator.clipboard.readText();
+        const readText = await clipboard.readText();
         pre.textContent += `copied text: ${readText}\n`;
       },
       (err) => {
