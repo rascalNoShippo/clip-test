@@ -26,3 +26,11 @@
   });
 
 })();
+
+function shareOnLine(
+  /** @type {string} */ url, 
+  /** @type {string} */ text
+) {
+  const sharingUrl = `https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`;
+  location.href = sharingUrl;
+}
