@@ -25,12 +25,8 @@
     );
   });
 
+  const line = document.querySelector("#line");
+  line?.addEventListener("click", () => {
+    location.href = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent("https://www.google.com/")}&text=test`
+  })
 })();
-
-function shareOnLine(
-  /** @type {string} */ url, 
-  /** @type {string} */ text
-) {
-  const sharingUrl = `https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`;
-  location.href = sharingUrl;
-}
