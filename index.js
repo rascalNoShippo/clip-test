@@ -27,6 +27,6 @@
 
   const line = document.querySelector("#line");
   line?.addEventListener("click", () => {
-    location.href = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent("https://www.google.com/")}&text=test`
+    location.href = `https://line.me/R/share?text=${encodeURIComponent("https://www.google.com/")}`
   })
 })();
